@@ -7,8 +7,10 @@ const useFetch  = (url) => { //custom hook must start with use...
     const[error, setError] = useState(null);
 
     useEffect(() => {
+        const abortCont = new AbortController();// to stop the fetch
+
         setTimeout(() =>{
-            fetch(url)
+            fetch(url, { signal: abortCont.signal })
             .then(res =>{
                 if(!res.ok){
                     throw Error('Could not fetch the data for that resource');
@@ -21,11 +23,17 @@ const useFetch  = (url) => { //custom hook must start with use...
                 setError(null);
             })
             .catch(err => {
-                setIsPending(false);
-                setError(err.message);
-                //console.log(err.message);
+                if(err.name === 'AbortError'){
+                    console.log('fetch aborted');
+                }else{
+                    setIsPending(false);
+                    setError(err.message);
+                    //console.log(err.message);
+                }
             })//Handling fetch errors
         }, 1000);
+
+        return () => abortCont.abort();
     }, [url]);
     return {data, isPending, error };
 }
