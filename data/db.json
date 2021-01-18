@@ -1,0 +1,16 @@
+{
+    "blogs":[
+        {
+            "title":"My first blog",
+            "body":"Nulla qui ea id Lorem incididunt. Aliquip voluptate minim ad ullamco excepteur in nulla consequat sit. Eiusmod qui fugiat laboris amet laborum fugiat irure officia tempor. Lorem reprehenderit cillum cupidatat sunt do adipisicing ullamco. Minim ipsum deserunt voluptate consectetur anim ut proident laborum officia aliquip. Nisi quis in eiusmod amet dolore nisi aute est enim pariatur adipisicing veniam. Id ea qui ullamco nostrud cillum exercitation laborum ipsum.",
+            "author":"Mario",
+            "id": 1
+        },
+        {
+            "title":"Opening Party!",
+            "body":"Cillum magna velit non Lorem eu voluptate et laborum qui adipisicing excepteur exercitation. Id qui adipisicing ullamco aliqua eu minim labore anim aliqua. Eu eu nostrud enim quis proident cupidatat. Ipsum duis amet dolore occaecat. Excepteur voluptate deserunt culpa commodo est sunt anim deserunt reprehenderit cillum anim. Fugiat culpa aute esse labore nostrud et labore velit. Esse adipisicing cupidatat ullamco anim nostrud ullamco mollit.",
+            "author":"Luigi",
+            "id": 2
+        }
+    ]
+}
